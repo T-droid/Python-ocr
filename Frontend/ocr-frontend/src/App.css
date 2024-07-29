@@ -1,0 +1,108 @@
+/* Base styles for all screen sizes */
+.App {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  background-color: #1a1a1a;
+  filter: hue-rotate(180deg) brightness(0.5);
+  width: 250px;
+  border-radius: 70px;
+}
+
+.logo:hover {
+  box-shadow: 0 0 0 hsl(200, 71%, 60%);
+}
+
+.App-header {
+  background-color: #282c34;
+  border-radius: 10px;
+  padding: 1rem;
+  color: hsl(0, 10%, 89%);
+  width: 90%;
+  max-width: 600px;
+}
+
+.App-header h1 {
+  font-weight: lighter;
+}
+
+.container {
+  background-color: inherit;
+  padding: 20px;
+  color: white;
+  width: 90%;
+  max-width: 600px;
+}
+
+.container .result {
+  margin-top: 50px;
+  width: fit-content;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #61dafb;
+  border: none;
+  cursor: pointer;
+  color: rgb(245, 241, 241);
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.result h2 {
+  margin-top: 0;
+}
+
+.file-input {
+  background-color: #1a1a1a;
+}
+
+
+/* Media query for tablets and larger screens */
+@media (min-width: 600px) {
+  .App-header, .container {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .result {
+    max-width: 70%;
+  }
+}
+
+/* Media query for larger screens (desktops) */
+@media (min-width: 1024px) {
+  .App-header, .container {
+    width: 70%;
+    max-width: 1000px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  .result {
+    max-width: 60%;
+  }
+}
